@@ -1,0 +1,50 @@
+.showContainer {
+    display: flex;
+    margin-top: 80px;
+    flex-wrap: wrap;
+}
+
+.col2 {
+    flex: 2;
+    min-width: 260px;
+    justify-content: center;
+}
+
+.col1 {
+    flex: 1;
+    min-width: 260px;
+    padding: 10px;
+}
+
+.col2 img {
+    width: 75%;
+    height: 90%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.des {
+    text-align: justify;
+    font-size: 14px;
+   
+}
+
+.action {
+    background-color: white;
+    padding: 10px;
+}
+
+.action a button {
+    width: 100%;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+}
+
+.action a {
+    color: white;
+}

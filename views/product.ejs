@@ -1,0 +1,30 @@
+<%- include('partials/header.ejs')   %>
+<link rel="stylesheet"  href="/styles/nav.css" />
+<link rel="stylesheet"  href="/styles/Procard.css"/>
+<script src="/javascript/nav.js"></script>
+<h1 style="text-align: center; margin-top: 80px;">Our Product</h1>
+<div class="container">
+    
+
+     <% productsArray.forEach(function(item){ %>
+        <a href="/product/<%=item._id %>?id=<%=item._id %>">
+            <div class="card">
+                <div class="productContainer">
+                    <img  src="<%=item.img%>"  />
+                </div>
+                <div class="cardbody">
+                    <div class="row">
+                        <h4><%=item.name%></h4>
+                        <h4>price: &#8377;<%= item.price%> </h4>
+                    </div>
+                    <% var des=item.des.substring(0,85)%>
+                   <p style="font-size: 16px;">
+                    <%= des %> ....
+                    <a href="/product/<%=item._id %>?id=<%=item._id %>" >read more</a>
+                   </p>
+                </div>
+            </div>
+        </a>
+     <% }) %>
+</div>
+<%- include('partials/footer.ejs')   %>

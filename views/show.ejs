@@ -1,0 +1,48 @@
+<%- include('partials/header.ejs') %>
+    <link rel="stylesheet" href="/styles/nav.css" />
+    <script src="/javascript/nav.js"></script>
+    <link rel="stylesheet"  href="/styles/show.css"/>
+    
+<p id="msgBox"></p>
+    <div class="showContainer">
+        <div class="col2">
+            <img src="<%= sp.img %>" />
+        </div>
+        <div class="col1">
+            <div class="desContainer">
+                <div class="row">
+                    <p>
+                        <%=sp.name %>
+                    </p>
+                    <p>Price: &#8377; <%=sp.price %>
+                    </p>
+                </div>
+                <p class="des"><b style=" border: bottom 1px solid black ;">Descripation :-</b><br/>
+                    <%= sp.des %>
+                </p>
+            </div>
+        </div>
+        <div class="col1">
+            <div class="action">
+                <div class="row">
+                    <p>Price :- </p>
+                    <p> &#8377; <%=sp.price %>
+                    </p>
+                </div>
+                <div class="row">
+                    <p style="margin-top:-6px;">qty:-</p>
+                    <select style="height: 20px; " onchange="selecttQty(this)">
+                        <% for(i=1;i<=sp.qtyInStock;i++){%>
+                            <option value=<%=i %>><%= i %>
+                            </option>
+                            <%}%>
+                    </select>
+                </div>
+                
+                    <button type="button" onclick="addToCart()">Add to cart</button>
+                
+            </div>
+        </div>
+    </div>
+     <script src="/javascript/show.js"></script>
+    <%- include('partials/footer.ejs') %>

@@ -1,0 +1,63 @@
+<%- include('partials/header.ejs')   %>
+<link rel="stylesheet"  href="/styles/nav.css" />
+<script src="/javascript/nav.js"></script>
+<link rel="stylesheet"  href="/styles/form.css" />
+<div class="formContainer">
+    <form onsubmit="return handlesubmit()">
+      <div style="display: flex; justify-content: center;">
+        <img  style="border-radius: 50%; width: 50px; height: 50px;" src="/images/logo.jpg"/>
+      </div>
+        <!-- <img style="width: 60px; height: 60px; border-radius: 50%; text-align: center;" src="./images/freshflower.png" /> -->
+        <h2 style="text-align: center;">Register</h2>
+        <div>
+          <p class="msg" style="color: red; text-align: center;"></p>
+        </div>
+        <label>Name</label>
+        <input type="text"
+         placeholder=" Enter User name" 
+         name="userName"
+         oninput="validate(this)"
+         required
+        />
+        <label>Email</label>
+        <input
+         type="email" 
+         placeholder=" Enter User email" 
+         name="email"
+         oninput="validate(this)"
+         required
+         />
+        <label>Password</label>
+        <input 
+          type="password" 
+          placeholder="password" 
+          name="password"
+          oninput="validate(this)"
+          required
+        />
+        <label>Confirm password </label>
+        <input 
+         type="password" 
+         placeholder="Confirm password" 
+         name="confirmPassword"
+         oninput="validate(this)"
+         required
+        />
+        <button type="submit">Register</button>
+        <p style="margin-bottom: 40px;">Existing user ? <a style="color: blue;" href="/signin">SignIn</a></p>
+    </form>
+</div>
+<script src="/javascript/signup.js"></script>
+<%- include('partials/footer.ejs')   %>
+
+
+
+
+
+
+
+
+
+
+
+

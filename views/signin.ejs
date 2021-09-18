@@ -1,0 +1,51 @@
+<%- include('partials/header.ejs')   %>
+<link rel="stylesheet"  href="/styles/nav.css" />
+<script src="/javascript/nav.js"></script>
+<link rel="stylesheet"  href="/styles/form.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />"
+<div class="formContainer">
+    <form onsubmit="return handlesubmit()">
+      <div style="display: flex; justify-content: center;">
+        <img  style="border-radius: 50%; width: 50px; height: 50px;" src="/images/logo.jpg"/>
+      </div>
+        <h2 style="text-align: center;">SignIn</h2>
+        <div>
+          <p class="msg" style="color: red;text-align: center;"></p>
+        </div>
+        <label>Email</label>
+        <input 
+          type="email"
+          placeholder="email"
+          name="email"
+          required
+          oninput="validate(this)"
+        />
+        <label>Password</label>
+        <input 
+          type="password"
+          placeholder="password" 
+          name="password"
+          required
+          oninput="validate(this)"
+        />
+        <button type="submit">SignIn</button>
+        <p style="margin-bottom: 40px;">New user ? <a style="color: blue;" href="/signup"><b>register</b></a></p>
+        
+          <div style=" color: cadetblue; margin-top: -20px; text-align: center;">
+           <b>Login with social media</b> 
+          </div>
+          
+            <div class=" socialmediaicon">
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-twitter"></i>
+            </div>
+
+          
+           
+        
+    </form>
+</div>
+
+<script src="/javascript/signin.js"></script>
+<%- include('partials/footer.ejs')   %>
