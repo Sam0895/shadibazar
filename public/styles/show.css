@@ -22,17 +22,17 @@
 .showdes{
     width: 75%;
     padding: 20px;
-    border-left:3px solid rgb(206, 119, 119);
+    /* border-left:3px solid rgb(206, 119, 119);
     border-top: 3px solid green;
     border-right: 3px solid brown;
     border-bottom: 3px solid yellow;
-    background-color: whitesmoke;
+    background-color: whitesmoke; */
     box-shadow: 1px 3px 3px 2px rgb(231, 159, 159);
     
 }
 .col2 img {
     width: 75%;
-    height: 100vh;
+    height: 70%;
     
 }
 
