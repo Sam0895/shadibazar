@@ -1,4 +1,5 @@
 const db=require('../models/index'),
+products = require('../data/dummyProduct'),
 removeProducts= (req, res)=> {
     db.Products.remove({})
         .then(function (products) {

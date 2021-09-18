@@ -47,7 +47,7 @@ function handlesubmit(){
                          promise.then(function(data){
                               localStorage.setItem("userInfo",JSON.stringify(data));
                               console.log(data);
-                              location.href="/shipping";
+                              location.href=`/shipping/${data.token}`;
                          })
                    }else{
                        promise.then(function(err){

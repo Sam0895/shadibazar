@@ -20,10 +20,10 @@ class NavBar {
                <span class="banner">${length}</span>
               </a>`
             }
-           
+            
             ${userInfo ?
                 ` <div class="dropdown">
-               <button class="dropbtn">${userInfo.name}</button>
+               <button class="dropbtn"> ${userInfo.name}</button>
                <div class="dropdown-content">
                   <a href="#">Profile</a>
                   <a href="#">Orders</a>

@@ -1,3 +1,12 @@
+<script>
+ const userInformation=localStorage.getItem("userInfo")?
+  JSON.parse(localStorage.getItem("userInfo"))
+  :null;
+
+if(userInformation){
+  location.href="/products"
+}
+</script>
 <%- include('partials/header.ejs')   %>
 <link rel="stylesheet"  href="/styles/nav.css" />
 <script src="/javascript/nav.js"></script>

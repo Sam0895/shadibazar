@@ -5,6 +5,7 @@ const ex = require('express'),
     root=require('./helpers/root'),
     addProducts=require('./helpers/addProducts'),
     removeProducts=require('./helpers/removeProducts'),
+    removeUsers=require('./helpers/removeUsers'),
     ourProducts=require('./helpers/ourProducts'),
     showPage=require('./helpers/showPage'),
     signIn=require('./helpers/signIn'),
@@ -15,7 +16,6 @@ const ex = require('express'),
     shipping=require('./helpers/shipping'),
     cart=require('./helpers/cart'),
     db = require('./models/index'),
-    products = require('./data/dummyProduct'),
     dotenv=require('dotenv');
     dotenv.config()
     app = ex();
@@ -25,8 +25,9 @@ bcrypt = require('bcrypt'),
 app.use(ex.json());                //to parse the upcoming post request data       
 
 app.get('/', root)
-app.get('/addproducts', addProducts)
-app.get('/removeproducts',removeProducts)
+// app.get('/addproducts', addProducts)
+// app.get('/removeproducts',removeProducts)
+// app.get('/removeUsers',removeUsers)
 app.get('/products',ourProducts)
 app.get('/product/:id', showPage)
 //-----------------------authentication ---------------
@@ -34,11 +35,8 @@ app.get('/signin',signIn)
 app.post('/signin',signInApi);
 app.get('/signup',signUp)
 app.post('/signup',signUpApi)
-
 app.get('/cart', cart)
-
 app.get('/api/product/:id', productIdApi)
-
 app.get('/shipping/:token',verifyToken, shipping)
 
 app.listen(port, () =>{

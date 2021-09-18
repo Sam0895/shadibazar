@@ -2,16 +2,16 @@ a{
     text-decoration: none;
 }
 body{
-    background-color:rgb(235, 228, 228);
+    background-color: white;
     padding: 0;
     margin: 0;
 }
 .nav{
-    background-color:seagreen;
+    background-color: red;
     display: flex;
     justify-content:space-between;
     padding: 0px 15px;
-    box-shadow: 3px 3px 3px;
+    box-shadow: 3px 3px 3px rgb(241, 111, 111);
     
     /*position fix  */
     position: fixed;
@@ -22,18 +22,24 @@ body{
 .brand{
     display: flex;
     align-items: center;
-   
 }
 .menu-items{
     display: flex;
     align-items: center;
-    
+    margin-right: 20px;
+   
    
 }
 .menu-items a{
-    margin-right: 20px;
+ 
     padding:0px 15px;
     color: white;
+    font-weight: 700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.brand h3{
+    font-weight:bolder;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .brand a img{
     width: 50px;
@@ -66,10 +72,11 @@ form button{
     
 }
 .banner{
-    background-color:red;
-    border-radius:50%;
+    background-color: whitesmoke;
+    border-radius:60%;
     padding: 10px;
-    color: white;
+    color:red;
+    font-weight:bolder;
     padding: 5px;
     width: 50px;
     height: 50px; 
@@ -88,10 +95,11 @@ form button{
     
     padding: 16px;
     font-size: 16px;
+    font-weight: bolder;
     border: none;
     margin-left: 10px;
     color: white;
-    background-color: seagreen;
+    background-color: red;
     
   }
   
@@ -121,7 +129,7 @@ form button{
   
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {
-      background-color:seagreen;
+      background-color:red;
       color: white;
     }
   

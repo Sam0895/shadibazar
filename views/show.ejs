@@ -9,20 +9,20 @@
             <img src="<%= sp.img %>" />
         </div>
         <div class="col1">
+           <div class="showdes">
             <div class="desContainer">
                 <div class="row">
-                    <p>
+                    <b style="font-size: 18px;" >
                         <%=sp.name %>
-                    </p>
-                    <p>Price: &#8377; <%=sp.price %>
-                    </p>
+                    </b>
+                   <b style="color: maroon;"> 
+                    Price: &#8377; <%=sp.price %>
+                   </b>
                 </div>
-                <p class="des"><b style=" border: bottom 1px solid black ;">Descripation :-</b><br/>
+                <p class="des" style="font-size: 16px;"><b style=" border: bottom 1px solid black ; font-size: 18px;">Descripation :-</b><br/>
                     <%= sp.des %>
                 </p>
             </div>
-        </div>
-        <div class="col1">
             <div class="action">
                 <div class="row">
                     <p>Price :- </p>
@@ -30,19 +30,25 @@
                     </p>
                 </div>
                 <div class="row">
-                    <p style="margin-top:-6px;">qty:-</p>
-                    <select style="height: 20px; " onchange="selecttQty(this)">
+                    <p style="margin-top:-6px;">Qty:-</p>
+                    <select style="height: 20px; border: 1px solid brown;" onchange="selecttQty(this)">
                         <% for(i=1;i<=sp.qtyInStock;i++){%>
-                            <option value=<%=i %>><%= i %>
+                           <b>
+                            <option style="color: brown;" value=<%=i %>><%= i %>
                             </option>
+                           </b>
                             <%}%>
                     </select>
                 </div>
                 
-                    <button type="button" onclick="addToCart()">Add to cart</button>
+                    <button  class="addToCartBtn" type="button" onclick="addToCart()">Add to cart</button>
                 
             </div>
+           </div>
         </div>
+        <!-- <div class="col1">
+          
+        </div> -->
     </div>
      <script src="/javascript/show.js"></script>
     <%- include('partials/footer.ejs') %>

@@ -6,9 +6,11 @@
         console.log(itemInCart);
 
         function createcartItem(item) {
-            return `<img  width="80px" height="80px"   src=${item.img} />
+            return `<div style="display:flex; flex-direction:column; align-item:center; padding:8px; justify-content:center;">
+            <img  width="80px" height="80px"   src=${item.img} />
                 <a href="#">${item.name}</a>
-                <span> &#8377; ${item.price} X ${item.selectedQty} </span>
+                </div>
+                <span > <b>&#8377; ${item.price} X ${item.selectedQty}</b> </span>
                 <button id=${item._id} onclick="deleteItem(this)">Delete</button> `;
         }
         for (i = 0; i < itemInCart.length; i++) {
@@ -31,9 +33,10 @@
         if (itemInCart.length == 0) {
             const msgBox = document.querySelector('.msgBox');
             msgBox.innerHTML = `
-           <p style="color:red";>Your Cart is Empty 
-            <a href="/products">Go Shopping</a>
-            </p>
+          <div class="blankCart">
+              <h2> Nothing in Cart</h2>
+              <a href="/products"><button>Shop Now </button></a>
+            </div>
            `;
         }
         if (itemInCart.length != 0) {
@@ -46,9 +49,16 @@
 
             const action = document.querySelector('.action');
             action.innerHTML = `
-            <div class="actionsty">
-                <p> ${itemInCart.length} items &#8377; ${totalAmount}</p>
-                ${user?
+            <div class="actionsty" >
+                 <div style="display:flex; justify-content:space-between;">
+                   <p>Total Items </p>
+                   <p>${itemInCart.length}</p>
+               </div>
+                <div style="display:flex; justify-content:space-between;">
+                     <p> Total Price</p>
+                    <p> &#8377; ${totalAmount}</p>
+                 </div>
+             ${user?
                     `<a href="/shipping/${user.token}">
                         <button> Proceed to checkout </button>
                      </a>`

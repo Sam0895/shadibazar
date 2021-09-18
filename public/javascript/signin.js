@@ -1,3 +1,4 @@
+
 const userInfo={
     email:'',
     password:''
@@ -13,7 +14,9 @@ function validate(e){
       userInfo.password=value;
   }
 }
-
+function insta(){
+    alert("Coming Soon")
+  }
 function handlesubmit(){
     const redirect=location.search.split("=")[1];
    
@@ -36,7 +39,7 @@ function handlesubmit(){
                          promise.then(function(data){
                             localStorage.setItem("userInfo",JSON.stringify(data));
                             if(redirect=="shipping"){
-                                location.href="/shipping";
+                                location.href=`/shipping/${data.token}`;
                             }else{
                                 location.href="/products";
                             }
