@@ -5,3 +5,4 @@ const mongoose=require('mongoose');
 
    module.exports.Products=require('./product');
    module.exports.Users=require('./user'); 
+   module.exports.SliderImg=require('./slider')

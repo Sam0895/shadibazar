@@ -8,14 +8,13 @@ if(userInformation){
 }
 </script>
 <%- include('partials/header.ejs')   %>
-<link rel="stylesheet"  href="/styles/nav.css" />
-<script src="/javascript/nav.js"></script>
+
 <link rel="stylesheet"  href="/styles/form.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />"
 <div class="formContainer">
     <form onsubmit="return handlesubmit()">
       <div style="display: flex; justify-content: center;">
-        <img  style="border-radius: 50%; width: 50px; height: 50px;" src="/images/logo.jpg"/>
+       <a href="/products"> <img style="border-radius: 50%; width: 50px; height: 50px;" src="/images/logo.jpg"/></a>
       </div>
         <h2 style="text-align: center;">SignIn</h2>
         <div>
@@ -59,4 +58,3 @@ if(userInformation){
 <script src="/javascript/signin.js">
   
 </script>
-<%- include('partials/footer.ejs')   %>

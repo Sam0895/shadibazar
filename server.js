@@ -1,3 +1,5 @@
+const slideImg = require('./data/sliderImages');
+
 const ex = require('express'),
     port = process.env.PORT || 4445,
     jwt=require('jsonwebtoken'),
@@ -15,6 +17,7 @@ const ex = require('express'),
     productIdApi=require('./helpers/productIdApi'),
     shipping=require('./helpers/shipping'),
     cart=require('./helpers/cart'),
+    SliderImg=require('./data/sliderImages'),
     db = require('./models/index'),
     dotenv=require('dotenv');
     dotenv.config()
@@ -25,6 +28,14 @@ bcrypt = require('bcrypt'),
 app.use(ex.json());                //to parse the upcoming post request data       
 
 app.get('/', root)
+app.get('/addSlide',(req, res)=>  {
+    db.SliderImg.insertMany(slideImg)
+        .then(function (slideImg) {
+            res.json(slideImg);
+        }).catch(function (err) {
+            res.json(err);
+        })
+})
 // app.get('/addproducts', addProducts)
 // app.get('/removeproducts',removeProducts)
 // app.get('/removeUsers',removeUsers)
