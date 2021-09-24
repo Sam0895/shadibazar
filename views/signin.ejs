@@ -10,7 +10,7 @@ if(userInformation){
 <%- include('partials/header.ejs')   %>
 
 <link rel="stylesheet"  href="/styles/form.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />"
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <div class="formContainer">
     <form onsubmit="return handlesubmit()">
       <div style="display: flex; justify-content: center;">
@@ -37,7 +37,7 @@ if(userInformation){
           oninput="validate(this)"
         />
         <button type="submit">SignIn</button>
-        <p style="margin-bottom: 40px;">New user ? <a style="color: blue;" href="/signup"><b>register</b></a></p>
+        <p style="margin-bottom: 40px;">New user ? <a style="color: blue; text-decoration: none;" href="/signup"><b>register</b></a></p>
         
           <div style=" color: cadetblue; margin-top: -20px; text-align: center;">
            <b>Login with social media</b> 
@@ -45,7 +45,8 @@ if(userInformation){
           
             <div class=" socialmediaicon">
               <i onclick="insta()" class="fab fa-facebook"></i>
-             <i onclick="insta()" class="fab fa-instagram" ></i>
+             
+              <i onclick="insta()" class="fab fa-google"></i>
               <i onclick="insta()" class="fab fa-twitter"></i>
             </div>
 

@@ -1,3 +1,6 @@
+body{
+    background-color:rgb(219, 207, 207);
+}
 .formContainer form{
     display: flex;
     flex-direction: column;
@@ -9,7 +12,8 @@
     border-top: 3px solid green;
     border-right: 3px solid brown;
     border-bottom: 3px solid yellow; */
-    box-shadow: 1px 3px 3px 2px rgb(231, 159, 159);
+    /* box-shadow: 3px 3px 3px 3px rgb(231, 159, 159); */
+    border: 2px solid red;
     margin-top: 100px;
     border-radius: 5px;
    
@@ -29,6 +33,7 @@ form input{
     border-top: 1px solid green;
     border-right: 1px solid brown;
     border-bottom: 1px solid yellow; */
+    border: 1px solid red;
     border-radius: 5px;
 }
 form button{

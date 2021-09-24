@@ -15,8 +15,8 @@ class NavBar {
      
         <div class="menu-items">
         ${length == 0 ?
-                ` <a href="/cart">Cart</a>` :
-                ` <a href="/cart">Cart
+                ` <a href="/cart"><i style="height:16px;" class="fas fa-shopping-cart"></i></a>` :
+                ` <a href="/cart"><i style="height:16px;" class="fas fa-shopping-cart"></i>
                <span class="banner">${length}</span>
               </a>`
             }
@@ -30,7 +30,7 @@ class NavBar {
                   <a href="#" onclick="logout()">Logout</a>
                 </div>
             </div>`:
-                ` <a href="/signin">SignIn</a>`}
+                ` <a href="/signin"><i class="fas fa-user"></i></a>`}
            
          </div>
     </div>`;

@@ -28,14 +28,14 @@ bcrypt = require('bcrypt'),
 app.use(ex.json());                //to parse the upcoming post request data       
 
 app.get('/', root)
-app.get('/addSlide',(req, res)=>  {
-    db.SliderImg.insertMany(slideImg)
-        .then(function (slideImg) {
-            res.json(slideImg);
-        }).catch(function (err) {
-            res.json(err);
-        })
-})
+// app.get('/addSlide',(req, res)=>  {
+//     db.SliderImg.insertMany(slideImg)
+//         .then(function (slideImg) {
+//             res.json(slideImg);
+//         }).catch(function (err) {
+//             res.json(err);
+//         })
+// })
 // app.get('/addproducts', addProducts)
 // app.get('/removeproducts',removeProducts)
 // app.get('/removeUsers',removeUsers)
