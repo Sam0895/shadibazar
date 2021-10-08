@@ -16,19 +16,37 @@
                         <%=sp.name %>
                     </b>
                    <b style="color: maroon;"> 
-                    Price: &#8377; <%=sp.price %>
+                        Price: &#8377; <%=sp.price %>
                    </b>
                 </div>
-                <p class="des" style="font-size: 16px;"><b style=" border: bottom 1px solid black ; font-size: 18px;">Descripation :-</b><br/>
+                <div style="display: flex; justify-content: space-between;">
+
+                    <div class="rating">
+                        <% for(r=1;r<=sp.rating;r++){%>
+                            <span><i style="color: goldenrod;" class="fa fa-star" aria-hidden="true"></i></span>
+                        <%}%>
+                        <span style="font-size: 1.2rem;"> 17 reviews</span>
+                    
+                   
+                    </div>
+                    <div class="checkStock" style="margin-top: -11px;">
+                        <% if(sp.qtyInStock>0){%>
+                            <p style="color: green;">In Stock</p><%}else{%>
+                                <p style="color: red;">Out of Stock</p>
+                            <%}%>
+                    </div>
+                </div>
+            <p class="des" style="font-size: 16px; margin-top: -13px;"><b style=" border: bottom 1px solid black ; font-size: 18px;">Descripation :-</b><br/>
                     <%= sp.des %>
                 </p>
-            </div>
+                <% if(sp.qtyInStock>0){%>
             <div class="action">
                 <div class="row">
                     <p>Price :- </p>
                     <p> &#8377; <%=sp.price %>
                     </p>
                 </div>
+              
                 <div class="row">
                     <p style="margin-top:-6px;">Qty:-</p>
                     <select style="height: 20px; border: 1px solid brown;" onchange="selecttQty(this)">
@@ -41,11 +59,13 @@
                     </select>
                 </div>
                 
-                    <button  class="addToCartBtn" type="button" onclick="addToCart()">Add to cart</button>
+                    <button  class="addToCartBtn" type="button" onclick="addToCart()"><a>Add to cart</a></button>
                 
             </div>
+            <%}%>
            </div>
         </div>
+        
         <!-- <div class="col1">
           
         </div> -->

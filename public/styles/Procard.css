@@ -2,35 +2,45 @@
 
 .card {
     width: 260px;
-    padding: 0px 10px;
+    padding: 0px 0px;
     background-color: white;
     margin: 16px;
-    border: 1px solid white;
+    
 }
-.card:hover{
-    margin-top: 3px;
-}
+
 
 .productContainer img {
     width: 260px;
     height: 325px;
+    padding: 0;
 }
 
 .cardbody {
-    padding: 10px;
+    padding: 0px;
     
+}
+a{
+    color: blue ;
 }
 
 .row {
     display: flex;
     justify-content: space-between;
     font-size: 17px;
+    margin-top: -23px;
 }
-
-.cardbody p {
-    text-align: justify;
-    margin-top: -10px;
-
+.Pbutton{
+    display: flex; 
+     justify-content: space-around; 
+     padding: 0; 
+    width: 260px;
+    margin-top: -26px;
+}
+.Pbutton button{
+    display: inline-block; 
+    width: 100%;
+    border-radius: 0;
+    height: 35px;
 }
 
 .card {

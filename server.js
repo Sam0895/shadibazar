@@ -1,13 +1,12 @@
-const slideImg = require('./data/sliderImages');
 
 const ex = require('express'),
     port = process.env.PORT || 4445,
     jwt=require('jsonwebtoken'),
     verifyToken=require('./utils'),
     root=require('./helpers/root'),
-    addProducts=require('./helpers/addProducts'),
-    removeProducts=require('./helpers/removeProducts'),
-    removeUsers=require('./helpers/removeUsers'),
+    // addProducts=require('./helpers/addProducts'),
+    // removeProducts=require('./helpers/removeProducts'),
+    // removeUsers=require('./helpers/removeUsers'),
     ourProducts=require('./helpers/ourProducts'),
     showPage=require('./helpers/showPage'),
     signIn=require('./helpers/signIn'),
@@ -22,7 +21,7 @@ const ex = require('express'),
     dotenv=require('dotenv');
     dotenv.config()
     app = ex();
-bcrypt = require('bcrypt'),
+    bcrypt = require('bcrypt'),
     app.use(ex.static("public"));      // static file use krne ke liye
 
 app.use(ex.json());                //to parse the upcoming post request data       
@@ -49,6 +48,9 @@ app.post('/signup',signUpApi)
 app.get('/cart', cart)
 app.get('/api/product/:id', productIdApi)
 app.get('/shipping/:token',verifyToken, shipping)
+app.get('/orders/:token',verifyToken,(req,res)=>{
+    res.render('orders.ejs')
+})
 
 app.listen(port, () =>{
     console.log(`server is running at ${port}`);

@@ -28,11 +28,13 @@
     border-bottom: 3px solid yellow;
     background-color: whitesmoke; */
     box-shadow: 1px 3px 3px 2px rgb(231, 159, 159);
+    background-color: whitesmoke;
     
 }
+
 .col2 img {
     width: 70%;
-    height: 70vh;
+    height: 90%;
     
 }
 

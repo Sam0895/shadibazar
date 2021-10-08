@@ -8,9 +8,9 @@
         function createcartItem(item) {
             return `<div style="display:flex; flex-direction:column; align-item:center; padding:8px; justify-content:center;">
             <img  width="80px" height="80px"   src=${item.img} />
-                <a href="#">${item.name}</a>
+                <a href="/product/${item._id}">${item.name}</a>
                 </div>
-                <span > <b>&#8377; ${item.price} X ${item.selectedQty}</b> </span>
+                <span > ${item.selectedQty} x ${item.price}  = &#8377;${item.price*item.selectedQty}  </span>
                 <button id=${item._id} onclick="deleteItem(this)">Delete</button> `;
         }
         for (i = 0; i < itemInCart.length; i++) {
@@ -46,6 +46,10 @@
             const user = localStorage.getItem("userInfo") ?     // condition 
             JSON.parse(localStorage.getItem("userInfo"))
             : null;
+            const shippingInfo = localStorage.getItem("shippingInfo") ?     // condition 
+            JSON.parse(localStorage.getItem("shippingInfo"))
+            : null;
+
 
             const action = document.querySelector('.action');
             action.innerHTML = `
@@ -58,11 +62,15 @@
                      <p> Total Price</p>
                     <p> &#8377; ${totalAmount}</p>
                  </div>
+                
              ${user?
-                    `<a href="/shipping/${user.token}">
-                        <button> Proceed to checkout </button>
-                     </a>`
-                    :
+                    `
+                    ${shippingInfo?`<a href="/orders/${user.token}">
+                    <button> Proceed to checkout </button>
+                 </a>`:`<a href="/shipping/${user.token}">
+                 <button> Proceed to checkout </button>
+              </a>`}
+                    `:
                     `<a href="/signin?redirect=shipping">
                         <button> Proceed to checkout </button>
                      </a>`

@@ -1,21 +1,83 @@
 
-<%- include('partials/header.ejs') %>
-    <link rel="stylesheet" href="/styles/nav.css" />
-    <script src="/javascript/nav.js"></script>
-    <style>
-      .com{
-        display: flex;
-       position: absolute;
-       top: 50%;
-       left: 50%;
-       transform: translate(-50%,-50%);
-        align-items: center;
-        justify-content: center;
-
-      }
-    </style>
-
-      <div class="com">
-        <h1 >Comming Soon</h1>
+<script>
+  const shippingInformation=localStorage.getItem("shippingInfo")?
+  JSON.parse(localStorage.getItem("shippingInfo"))
+  :null;
+  const user=JSON.parse(localStorage.getItem("userInfo"))
+if(shippingInformation){
+    
+  location.href=`/orders/${user.token}`
+}
+</script>
+<%- include('partials/header.ejs')   %>
+<link rel="stylesheet"  href="/styles/form.css" />
+<div class="formContainer">
+    <form onsubmit="return handlesubmit()">
+      <div style="display: flex; justify-content: center;">
+        <a href="/products"><img  style="border-radius: 50%; width: 50px; height: 50px;" src="/images/logo.jpg"/></a>
       </div>
+        <!-- <img style="width: 60px; height: 60px; border-radius: 50%; text-align: center;" src="./images/freshflower.png" /> -->
+        <h2 style="text-align: center;">Shipping Address</h2>
+        <div>
+          <p class="msg" style="color: red; text-align: center;"></p>
+        </div>
+      
+        <label>Name</label>
+        <input 
+          type="text"
+          placeholder="user name "
+          name="name"
+          required
+          oninput="validate(this)"
+        />
+        <label>Address</label>
+        <input 
+          type="text"
+          placeholder="address" 
+          name="address"
+          required
+          oninput="validate(this)"
+        />
+        <label>City</label>
+        <input 
+         type="text"
+         placeholder="city" 
+         name="city"
+         required
+         oninput="validate(this)"
+      />
+      <label>Contact</label>
+       <input 
+        type="number"
+        placeholder="contact " 
+        name="contact"
+        required
+        oninput="validate(this)"
+       />
+       <div class="phoneElement">
+         <p  style="margin-top: -6px;"> 
+           Phone Number must be of 10 digits
+         </p>
+       </div>
+      <label>Postal Code</label>
+       <input 
+        type="number"
+        placeholder="postalCode " 
+        name="postalCode"
+        required
+        oninput="validate(this)"
+       />
+       <label>Country</label>
+       <input 
+        type="text"
+        placeholder="country " 
+        name="country"
+        required
+        oninput="validate(this)"
+       />
+        <button type="submit">Continue</button>
+    </form>
+</div>
+<script src="/javascript/Shipping.js"></script>
+
 

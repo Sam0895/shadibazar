@@ -1,0 +1,74 @@
+.cartItemContainer {
+    display: flex;
+    margin-top:100px; 
+    flex-wrap: wrap;
+
+}
+.col2 {
+    flex: 2;
+    margin-top:0;
+    min-width: 260px;
+    padding: 10px;
+}
+
+.col1 {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+   padding: 0px;
+   
+    
+    /* margin-top: 20px; */
+}
+
+.actionsty {
+    background-color: whitesmoke;
+    padding: 10px 20px;
+    margin:0;
+    border-radius: 0px;
+    box-shadow: 1px 3px 3px 2px rgb(231, 159, 159);
+    border: 1px solid red;
+}
+
+
+.action button {
+    background-color: red;
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    min-width: 260px;
+    font-weight: bolder;
+    border-radius: 9px;
+    border: 1px solid red;
+   
+}
+.action{
+    padding: 10px;
+    width: 100%;
+}
+.cartitem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+    margin-top: 6px;
+   
+}
+.orderHolder{
+    background-color: whitesmoke;
+    padding: 15px;
+    box-shadow: 1px 3px 3px 2px rgb(231, 159, 159);
+    border: 1px solid red;
+}
+.shippingAdd{
+    box-shadow: 1px 3px 3px 2px rgb(231, 159, 159);
+    align-items: center;
+    padding: 15px;
+    border: 1px solid red;
+    background-color: whitesmoke;
+    margin-bottom: 20px;
+    font-size: 18px;
+   
+}
+
