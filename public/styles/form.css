@@ -13,7 +13,7 @@ body{
     border-right: 3px solid brown;
     border-bottom: 3px solid yellow; */
     /* box-shadow: 3px 3px 3px 3px rgb(231, 159, 159); */
-    border: 2px solid red;
+    border: 2px solid  palevioletred;
     margin-top: 100px;
     border-radius: 5px;
    
@@ -33,17 +33,17 @@ form input{
     border-top: 1px solid green;
     border-right: 1px solid brown;
     border-bottom: 1px solid yellow; */
-    border: 1px solid red;
+    border: 1px solid  palevioletred;
     border-radius: 5px;
 }
 form button{
     padding: 8px;
     margin: 8px 0;
-    box-shadow: 2px 2px 2px rgb(240, 13, 13);
+    box-shadow: 2px 2px 2px  palevioletred;
     border-radius: 5px;
-    border: 1px solid red;
+    border: 1px solid  palevioletred;
     color:white;
-    background-color:red;
+    background-color: palevioletred;
 }
 .socialmediaicon{
     display: flex;

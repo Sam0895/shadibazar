@@ -1,9 +1,9 @@
 
         let totalAmount = 0;
-        const itemInCart = localStorage.getItem("cartItems") ?
-            JSON.parse(localStorage.getItem("cartItems"))
+        const wishlist = localStorage.getItem("wishList") ?
+            JSON.parse(localStorage.getItem("wishList"))
             : [];
-        console.log(itemInCart);
+        console.log(wishlist);
         const shippingInfo = localStorage.getItem("shippingInfo") ?     // condition 
             JSON.parse(localStorage.getItem("shippingInfo"))
             : null;
@@ -17,26 +17,29 @@
             `
         const ShippingAdd=document.querySelector(".ShippingAdd");
         ShippingAdd.appendChild(shippingAddressHolder)
-        function createcartItem(item) {
+        function createwishList(item) {
            return `
             <img  width="50px" height="50px"   src=${item.img} />
                 <a href="/product/${item._id}">${item.name}</a>
                  <span > ${item.selectedQty} x ${item.price}  = &#8377;${item.price*item.selectedQty}  </span>
                `;
         }
-        for (i = 0; i < itemInCart.length; i++) {
-            const cartItemHolder = document.createElement('div');
-            cartItemHolder.className = ('cartitem');
-            cartItemHolder.innerHTML = createcartItem(itemInCart[i]);
+        for (i = 0; i < wishlist.length; i++) {
+            const wishListHolder = document.createElement('div');
+            wishListHolder.className = ('wishList');
+            wishListHolder.innerHTML = createwishList(wishlist[i]);
           const orderHolder= document.querySelector(".orderHolder");
-            orderHolder.appendChild(cartItemHolder);
+            orderHolder.appendChild(wishListHolder);
             
+        }
+        function fun(){
+            alert("coming soon")
         }
         
        
         
-        if (itemInCart.length != 0) {
-            itemInCart.forEach(function (item) {
+        if (wishList.length != 0) {
+            wishList.forEach(function (item) {
                 totalAmount = totalAmount + (Number(item.selectedQty) * item.price);
             });
             const user = localStorage.getItem("userInfo") ?     // condition 
@@ -47,16 +50,14 @@
             JSON.parse(localStorage.getItem("shippingInfo"))
             : null;
            
-         function fun(){
-             alert("coming soon")
-         }
+
             const action = document.querySelector('.action');
             action.innerHTML = `
             <div class="actionsty" >
             <h3> Order Summary </h3>
                  <div style="display:flex; justify-content:space-between; margin-top:-25px">
                    <p> Items </p>
-                   <p>${itemInCart.length}</p>
+                   <p>${wishlist.length}</p>
                </div>
                <div style="display:flex; justify-content:space-between;margin-top:-25px">
                <p> Shipping </p>
@@ -64,7 +65,7 @@
            </div>
            <div style="display:flex; justify-content:space-between;margin-top:-25px">
            <p> Tax </p>
-           <p>  &#8377;${totalAmount>500? totalAmount*18/100 :0}</p>
+           <p>  &#8377;${totalAmount>500? totalAmount*18/100 :0}</p> 
        </div>
            
                 <div style="display:flex; justify-content:space-between;margin-top:-25px">
@@ -75,14 +76,14 @@
                 
              ${user?
                     `
-                    ${shippingInfo?`<a href="/orders/${user.token}">
+                    ${shippingInfo?`<a href="/wishorders/${user.token}">
                     <button onclick="fun()"> Place Order </button>
                  </a>`:`<a href="/shipping/${user.token}">
                  <button > Place Order </button>
               </a>`}
                     `:
                     `<a href="/signin?redirect=shipping">
-                        <button> Place Order </button>
+                        <button > Place Order </button>
                      </a>`
 
                 }

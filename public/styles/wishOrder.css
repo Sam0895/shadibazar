@@ -1,4 +1,4 @@
-.cartItemContainer {
+.wishListContainer {
     display: flex;
     margin-top:100px; 
     flex-wrap: wrap;
@@ -26,13 +26,13 @@
     padding: 10px 20px;
     margin:0;
     border-radius: 0px;
-    box-shadow: 1px 3px 3px 2px rgb(219, 145, 170);
-    border: 1px solid  palevioletred;
+    box-shadow: 1px 3px 3px 2px rgb(231, 159, 159);
+    border: 1px solid palevioletred;
 }
 
 
 .action button {
-    background-color:  palevioletred;
+    background-color: palevioletred;
     border: none;
     color: white;
     width: 100%;
@@ -40,14 +40,14 @@
     min-width: 260px;
     font-weight: bolder;
     border-radius: 9px;
-    border: 1px solid  palevioletred;
+    border: 1px solid palevioletred;
    
 }
 .action{
     padding: 10px;
     width: 100%;
 }
-.cartitem {
+.wishList{
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -46,12 +46,18 @@ app.post('/signin',signInApi);
 app.get('/signup',signUp)
 app.post('/signup',signUpApi)
 app.get('/cart', cart)
+app.get('/wishlist', (req,res)=>res.render('wishList.ejs'))
 app.get('/api/product/:id', productIdApi)
 app.get('/shipping/:token',verifyToken, shipping)
 app.get('/orders/:token',verifyToken,(req,res)=>{
     res.render('orders.ejs')
 })
-
+app.get('/wishorders/:token',verifyToken,(req,res)=>{
+    res.render('wishOrder.ejs')
+})
+app.get('/directOrders/:token',verifyToken,(req,res)=>{
+    res.render('directOrder.ejs')
+})
 app.listen(port, () =>{
     console.log(`server is running at ${port}`);
 })

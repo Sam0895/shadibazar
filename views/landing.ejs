@@ -1,7 +1,24 @@
     <% -include( 'partials/header.ejs')  %>
      <style>
        
-.blankCart {
+    
+.blankCart button{
+    position: absolute;
+    top: 42%;
+   
+    left: 50%;
+    transform: translate(-50%,-50%);
+     align-items: center;
+     justify-content: center; 
+    background-color: palevioletred;
+    border-radius: 8px;
+    color: white;
+    font-weight: bolder;
+    font-size: 25px;
+    border: 1px solid palevioletred;
+    padding: 8px;
+}
+.blankCart h2{
     position: absolute;
     top: 30%;
     left: 50%;
@@ -11,28 +28,11 @@
 
     font-size: 30px;
 }
-.blankCart button a{
-   
-    /* top: 42%; */
-   
-    /* left: 50%; */
-    /* transform: translate(-50%,-50%); */
-     /* align-items: center;
-     justify-content: center;  */
-    background-color: red;
-    border-radius: 8px;
-    color: white;
-    font-weight: bolder;
-    font-size: 25px;
-    border: 1px solid red;
-    padding: 8px;
-    text-decoration: none;
-}
+
      </style>
-      <div class="blankCart">
-        <h2>Welcome to my Project :)</h2><br>
-        <button> <a href="/products"> 
-     Product Page</a></button>
+       <div class="blankCart">
+        <h2> Welcome to my project :)</h2>
+        <a href="/products"><button>Product Page </button></a>
       </div>
 
     <% -include( 'partials/footer.ejs')  %>

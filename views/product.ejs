@@ -9,6 +9,7 @@
   />
   <script src="/javascript/slider.js"></script>
   <script src="/javascript/homeCart.js"></script>
+  <script src="/javascript/homeWish.js"></script>
 <style>
    body{
     margin-top:61px;
@@ -19,19 +20,25 @@
 width: 100%;
 height: 50vh;
 }
+@media (max-width: 480px){
+  .swiper img{
+    width: 100%;
+height: 40vh; 
+  }
+}
 .swiper-button-prev{
-  color: red; 
+  color:  palevioletred; 
   height: 16px;
 width: 16px;
 
 }
 .swiper-button-next{
-color: red; 
+color:  palevioletred; 
 height: 16px;
 width: 16px;
 }
 span.swiper-pagination-bullet.swiper-pagination-bullet-active{
-background-color: red;
+background-color:  palevioletred;
 }
 
 </style>
@@ -51,7 +58,7 @@ background-color: red;
      </div> 
 
 
-<u> <h1 style="text-align: center; margin-top: 25px; font-size: 35px; font-family: 'Courier New', Courier, monospace;" >Your Products</h1></u>
+<u> <h1 style="text-align: center; margin-top: 15px; font-size: 35px; font-family: 'Courier New', Courier, monospace;" >Your Products</h1></u>
 <div class="container">
    
      <% productsArray.forEach(function(item){ %>
@@ -69,10 +76,20 @@ background-color: red;
                         <h4 style="color: black; "><%=item.name%></h4>
                         <h4 style="color: black;">price: &#8377;<%= item.price%> </h4>
                     </div>
-                   <div class="Pbutton">
-                     <button type="button" value="<%=item._id%>" onclick="addToCart(this)" style="background-color: rgb(243, 212, 76); border: none;"> <i style="color:blue; margin-right: 5px;height: 15px; width: 15px;" class="fas fa-cart-plus"></i>Add to Cart</button>
-                     <button type="button" value="<%=item._id%>" onclick="order(this)" style="background-color: rgb(236, 53, 53);border: none;"> <i style="color:white; margin-right: 5px;height: 15px; width: 15px;" class="fas fa-shopping-bag" ></i>Buy Now</button>
-                   </div>
+                    <% if(item.qtyInStock>0){%>
+                      <p style="color: green; font-size: 18px; margin-top: -30px; padding: 0 8px; ">Hurry up! In Stock</p>
+                      <div class="Pbutton">
+                        <button type="button" value="<%=item._id%>" onclick="addToCart(this)" style="background-color:rgb(76, 177, 76); border: none;"> 
+                         <i style="color:rgb(244, 244, 248); margin-right: 5px;height: 15px; width: 15px;" class="fas fa-cart-plus"></i>Add to Cart</button>
+                        <button type="button" value="<%=item._id%>" onclick="wishlist(this)" style="background-color:palevioletred;border: none;"> 
+                         <i style="color:white; margin-right: 5px;height: 15px; width: 15px;" class="far fa-heart" ></i>Add to Wishlist</button>
+                      </div>
+                    <%}else{%>
+                      <div class="Pbutton">
+                        <p style="margin-bottom: -0px; color: red; font-size: 18px;margin-left: -100px; "> Sorry! Out of stock</p>
+                      </div>
+                   <% }%>
+                   
                 </div>
             </div>
        
@@ -89,8 +106,6 @@ background-color: red;
       prevEl: '.swiper-button-prev',
     }
   });
-
-
 
   </script>
 <%- include('partials/footer.ejs')   %>

@@ -29,8 +29,8 @@
     background-color: whitesmoke;
     padding: 10px 20px;
     margin:0;
-    box-shadow: 3px 3px 3px rgb(226, 190, 190);
-    border: 1px solid red;
+    box-shadow: 3px 3px 3px rgb(219, 145, 170);
+    border: 1px solid  palevioletred;
 }
 
 .blankCart h2{
@@ -51,23 +51,23 @@
     transform: translate(-50%,-50%);
      align-items: center;
      justify-content: center; 
-    background-color: red;
+    background-color:  palevioletred;
     border-radius: 8px;
     color: white;
     font-weight: bolder;
     font-size: 25px;
-    border: 1px solid red;
+    border: 1px solid  palevioletred;
     padding: 8px;
 }
 .action button {
-    background-color: red;
+    background-color:  palevioletred;
     border: none;
     color: white;
     padding: 10px;
     min-width: 260px;
     font-weight: bolder;
     border-radius: 9px;
-    border: 1px solid red;
+    border: 1px solid  palevioletred;
     width: 100%;
 }
 
@@ -81,13 +81,13 @@
     border-top: 3px solid green;
     border-right: 3px solid brown; */
     /* border-bottom: 3px solid yellow; */
-    box-shadow: 1px 3px 3px 2px rgb(231, 159, 159);
-    border: 1px solid red;
+    box-shadow: 1px 3px 3px 2px rgb(219, 145, 170);
+    border: 1px solid  palevioletred;
 
 }
 
 .cartitem button {
-    background-color: red;
+    background-color:  palevioletred;
     margin-right: 10px;
     border: none;
     padding: 5px 10px;
@@ -97,7 +97,7 @@
     width: 80px;
     font-weight: bolder;
     border-radius: 9px;
-    border: 1px solid red;
+    border: 1px solid  palevioletred;
     
 }
 

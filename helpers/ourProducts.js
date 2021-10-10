@@ -1,5 +1,6 @@
 const db=require('../models/index'),
 // const slideImg=require('../data/sliderImages')
+
 ourProducts= (req, res)=>  {
    
     db.Products.find()

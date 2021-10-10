@@ -1,6 +1,6 @@
 class NavBar {
 
-    createNavBar(imgUrl, brandName, userInfo, length) {
+    createNavBar(imgUrl, brandName, userInfo, length,wishList) {
         return `   <div class="nav">
         <div class="brand">
             <a href="/products">
@@ -18,6 +18,12 @@ class NavBar {
                 ` <a href="/cart"><i style="height:16px;" class="fas fa-shopping-cart"></i></a>` :
                 ` <a href="/cart"><i style="height:16px;" class="fas fa-shopping-cart"></i>
                <span class="banner">${length}</span>
+              </a>`
+            }
+            ${wishList == 0 ?
+                ` <a href="/wishlist"><i style="color:white; height: 17px; width: 17px;" class="fas fa-heart" ></i></a>` :
+                ` <a href="/wishlist"><i style="color:white; height: 17px; width: 17px;" class="fas fa-heart" ></i>
+               <span class="banner">${wishList}</span>
               </a>`
             }
             
@@ -45,13 +51,16 @@ const user = localStorage.getItem("userInfo") ?
 const cartItems = localStorage.getItem("cartItems") ?
     JSON.parse(localStorage.getItem("cartItems"))
     : [];
+    const wishList = localStorage.getItem("wishList") ?
+    JSON.parse(localStorage.getItem("wishList"))
+    : [];
 
 
 const navBar = new NavBar();
 const imgUrl = "/images/logo.jpg";
 const brandName = "ShadiBazar";
 const navHolder = document.createElement('div');
-navHolder.innerHTML = navBar.createNavBar(imgUrl, brandName, user, cartItems.length);
+navHolder.innerHTML = navBar.createNavBar(imgUrl, brandName, user, cartItems.length,wishList.length);
 document.body.appendChild(navHolder);
 
 function logout() {

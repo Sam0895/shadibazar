@@ -27,7 +27,7 @@
     border-right: 3px solid brown;
     border-bottom: 3px solid yellow;
     background-color: whitesmoke; */
-    box-shadow: 1px 3px 3px 2px rgb(231, 159, 159);
+    box-shadow: 1px 3px 3px 2px  palevioletred;
     background-color: whitesmoke;
     
 }
@@ -58,11 +58,11 @@
 .addToCartBtn  {
     width: 100%;
     padding: 10px;
-    background-color: red;
+    background-color:  palevioletred;
     color: white;
     font-weight: 500;
     border-radius: 9px;
-    border: 1px solid red;
+    border: 1px solid  palevioletred;
 }
 
 .action a {

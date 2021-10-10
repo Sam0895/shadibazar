@@ -7,11 +7,11 @@ body{
     margin: 0;
 }
 .nav{
-    background-color: red;
+    background-color: palevioletred;;
     display: flex;
     justify-content:space-between;
     padding: 0px 15px;
-    box-shadow: 3px 3px 3px rgb(241, 111, 111);
+    box-shadow: 3px 3px 3px  palevioletred;
     
     /*position fix  */
     position: fixed;
@@ -26,20 +26,21 @@ body{
 .menu-items{
     display: flex;
     align-items: center;
-    margin-right: 15px;
+    margin-right: 10px;
    
    
 }
 
 .menu-items a{
  
-    padding:0px 15px;
+    padding:0px 10px;
     color: white;
     font-weight: 500;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
 }
 .brand h3{
-    font-weight:500;
+    font-weight:600;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .brand a img{
@@ -68,7 +69,7 @@ form input{
 form button{
     padding: 5px 8px;
     border-radius: 5px;
-    background-color: red;
+    background-color: palevioletred;
     color: white;
     
 }
@@ -77,7 +78,7 @@ form button{
     background-color: whitesmoke;
     border-radius:50%;
     padding: 10px;
-    color:red;
+    color: palevioletred;
     font-weight:bolder;
     font-size: 10px;
     padding: 5px;
@@ -97,7 +98,7 @@ form button{
     border: none;
     margin-left: 10px;
     color: white;
-    background-color: red;
+    background-color:  palevioletred;
     
   }
   
@@ -127,7 +128,7 @@ form button{
   
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {
-      background-color:red;
+      background-color: palevioletred;
       color: white;
     }
   

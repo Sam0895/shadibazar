@@ -6,6 +6,7 @@
     background-color: white;
     margin: 16px;
     
+    
 }
 
 
@@ -34,7 +35,7 @@ a{
      justify-content: space-around; 
      padding: 0; 
     width: 260px;
-    margin-top: -26px;
+    margin-top: -20px;
 }
 .Pbutton button{
     display: inline-block; 
@@ -49,7 +50,7 @@ a{
     border-top: 3px solid green;
     border-right: 3px solid brown;
     border-bottom: 3px solid yellow; */
-    box-shadow: 1px 3px 3px 2px rgb(231, 159, 159);
+    
 }
 
 .container {
