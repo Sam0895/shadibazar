@@ -21,13 +21,25 @@
             col2.appendChild(cartItemHolder);
         }
         function deleteItem(e) {
-            const filtercartItem = itemInCart.filter(function (item) {
-                if (item._id != e.id) {
-                    return item;
-                }
-            })
-            localStorage.setItem("cartItems", JSON.stringify(filtercartItem));   //update 
-            location.reload();   //reload page
+            
+            if(itemInCart.length==1){
+                const filtercartItem= itemInCart.filter(function (item) {
+                    if (item._id != e.id) {
+                        return item;
+                    }
+                })
+                localStorage.setItem("cartItems", JSON.stringify(filtercartItem));   //update 
+                location.href='/products'
+            }
+         else{
+             const filtercartItem= itemInCart.filter(function (item) {
+                 if (item._id != e.id) {
+                     return item;
+                 }
+             })
+             localStorage.setItem("cartItems", JSON.stringify(filtercartItem));   //update 
+             location.reload();   //reload page
+         }
 
         }
         if (itemInCart.length == 0) {

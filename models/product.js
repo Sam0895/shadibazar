@@ -22,10 +22,8 @@ const mongoose=require('mongoose'),
          type:Number,
          required:true
     },
-     rating:{
-         type:Number,
-         required:true
-    },
+     
+
    
 
   });

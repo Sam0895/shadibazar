@@ -21,6 +21,16 @@
             col2.appendChild(wishListHolder);
         }
         function deleteItem(e) {
+           if(wishlist.length==1){
+            const filterwishList= wishlist.filter(function (item) {
+                if (item._id != e.id) {
+                    return item;
+                }
+            })
+            localStorage.setItem("wishList", JSON.stringify(filterwishList));   //update 
+               location.href='/products'
+           }
+        else{
             const filterwishList= wishlist.filter(function (item) {
                 if (item._id != e.id) {
                     return item;
@@ -28,17 +38,19 @@
             })
             localStorage.setItem("wishList", JSON.stringify(filterwishList));   //update 
             location.reload();   //reload page
+        }
 
         }
-        if (wishList.length == 0) {
+        if (wishlist.length == 0) {
             const msgBox = document.querySelector('.msgBox');
             msgBox.innerHTML = `
           <div class="blankCart">
               <h2> Nothing in Wishlist</h2>
-              <a href="/products"><button>Add now </button></a>
+              <a href="/products"><button>Add Now </button></a>
             </div>
            `;
         }
+        
         if (wishList.length != 0) {
             wishList.forEach(function (item) {
                 totalAmount = totalAmount + (Number(item.selectedQty) * item.price);
