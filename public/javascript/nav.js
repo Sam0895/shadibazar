@@ -1,4 +1,4 @@
-class NavBar {
+ class NavBar {
 
     createNavBar(imgUrl, brandName, userInfo, length,wishList) {
         return `   <div class="nav">
